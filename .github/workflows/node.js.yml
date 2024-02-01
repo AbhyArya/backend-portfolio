@@ -29,5 +29,5 @@ jobs:
         touch .env
         echo "${{ secrets.ENV }}" > .env
     - run: pwd
-    - run: sudo pm2 restart app.js
+    - run: sudo pm2 restart app.js --node-args="-r esm"
     
